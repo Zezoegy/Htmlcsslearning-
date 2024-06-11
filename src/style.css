@@ -1,51 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 body {
     margin: 0;
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidebar {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sidebar {
+    font-size: 1.3rem;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     width: 180px;
     background-color: #d1f19e;
     position: absolute;
     height: 100%;
-    overflow:auto;
+    overflow: none;
+    animation-name: meme;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes meme {
+    from {background-color: #eafdcc;}
+    to {background-color:rgb(255, 228, 253);}
+}
+
+.main {
+    justify-content: center;
+}
+.button {
+    margin-top: 80px;
+    padding: 10px 15px;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor:grabbing;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+    color: #fbfbfb;
+    background-color: #25ac03;
+    border: none;
+    border-radius: 15px;
+    box-shadow:0 3px #888888,0 5px rgb(108, 108, 108) ,0 7px #4d4d4d,0 9px #363636;
   }
   
-  .sidebar a {
+  .button:hover {background-color: #36c33b}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(9px);
+  }
+
+.sidebar a {
     display: block;
-    color: black;
+    border-bottom: 2px dotted rgb(232, 39, 203);
+    color: rgb(92, 202, 23);
     padding: 16px;
     text-decoration: none;
-  }
-   
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
- 
+    transition: all.4s ease-in-out, width 1s,linear 1s;
+}
 
-  
-  @media screen and (max-width: 700px) {
+
+
+.sidebar a:hover {
+    padding-left: 50px;
+    border: 2px double black;
+
+
+}
+
+
+
+
+@media screen and (max-width: 700px) {
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  @media screen and (max-width: 400px) {
+
     .sidebar a {
-      text-align: center;
-      float: none;
+        float: left;
     }
-  }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}

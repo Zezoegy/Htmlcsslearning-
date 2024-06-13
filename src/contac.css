@@ -1,0 +1,76 @@
+body {
+background-image:linear-gradient(lightblue,rgb(252, 196, 148));
+background-repeat:unset;
+}
+
+.sideup {
+top: 0;
+padding: 5px;
+position:static;
+}
+.sideup button {
+    align-content:space-evenly;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 4px;
+    font-size:18px;
+    cursor:grabbing;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+    color: #fbfbfb;
+    background-image: radial-gradient(rgb(3, 160, 3), rgb(183, 255, 129));
+    border: none;
+    border-radius: 4px;
+    box-shadow:0 3px #888888,0 5px rgb(108, 108, 108) ,0 7px #4d4d4d,0 9px #363636;
+  }
+
+  .sideup button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(9px);
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

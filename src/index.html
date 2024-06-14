@@ -1,24 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>Demo</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <meta name="viewport" content="width=device-width , initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <head><title>Show</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sidebar">
-    
-    <a class="active" href="#home">Home</a>
-    <a href="sid.html">News</a>
-    <a href="contact.html">Contact</a>
-    <a href="#about">About</a>
-    <a href="index.html">Refreash</a>
-    <button class="button">NOW</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="chaitanya-pillala-zDDdoYqQ64U-unsplash.jpg"  width="80px" height="50px" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<div class="slide-show-con">
+  <legend style="text-align: end; font-size: 15px; color: aliceblue;" >Slide show</legend>
+  <div class="mySlides fade">
+    <div class="number">1/4</div>
+    <img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="moon">
+    <div class="caption">luner full</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="number">2/4</div>
+    <img src="https://images.unsplash.com/photo-1512987415479-85f370bca602?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="halfmoon">
+    <div class="caption">luner half</div>
+  </div>
+  <div class="mySlides fade">
+  <div class="number">3/4</div>
+  <img src="https://images.unsplash.com/photo-1514897575457-c4db467cf78e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%"  alt="slimmoon">
+  <div class="caption">Slim</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="number">4/4</div>
+    <img src="https://images.unsplash.com/photo-1499578124509-1611b77778c8?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="cloudy">
+    <div class="caption">Cloudy moon</div>
   </div>
 
+  <a class="pre" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="nex" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align: center;">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
   
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+
+  <footer>
+
+  </footer>
 </body>
-<footer></footer>
 </html>

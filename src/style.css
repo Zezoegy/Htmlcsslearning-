@@ -1,103 +1,223 @@
+* {
+    box-sizing: border-box;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.slide-show-con {
+    border: 2px solid rgb(125, 85, 4);
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    border-radius: 15px;
+}
 
+.mySlides {
+    display: none;
+
+}
+img {
+    vertical-align: middle;
+    float:none;
+    border-radius: 15px;
+}
+.pre,
+.nex {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.2s ease-in-out;
+    border-radius:  20%;
+    user-select: none;
+}
+
+.nex {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.pre:hover .nex:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.caption {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.number {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
 
 
 body {
-    margin: 0;
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+    background-image: url(pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
-.sidebar {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    width: 180px;
-    background-color: #d1f19e;
-    position: absolute;
-    height: 100%;
-    overflow: none;
-    animation-name: meme;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
 }
 
-@keyframes meme {
-    from {background-color: #eafdcc;}
-    to {background-color:rgb(255, 228, 253);}
+.active,
+.dot:hover {
+    background-color: #907a7ad1;
 }
 
-.main {
-    justify-content: center;
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
-.button {
-    margin-top: 80px;
-    padding: 5px 4px;
-    font-size: 24px;
-    margin-left: 20px;
-    cursor:grabbing;
-    text-align: center;
-    text-decoration: none;
-    outline:none;
-    color: #fbfbfb;
-    background-color: #25ac03;
+
+@keyframes fade {
+    from {
+        opacity: .8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/*forms*/
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-image:linear-gradient(rgb(198, 217, 252),rgb(68, 102, 251));
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    border-radius: 15px;
-    box-shadow:0 3px #888888,0 5px rgb(108, 108, 108) ,0 7px #4d4d4d,0 9px #363636;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 40%;
   }
   
-  .button:hover {background-color: #36c33b}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 3px #666;
-    transform: translateY(9px);
+  button:hover {
+    opacity: 0.8;
   }
-
-.sidebar a {
-    display: block;
-    border-bottom: 2px dotted rgb(232, 39, 203);
-    color: rgb(92, 202, 23);
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
     padding: 16px;
-    text-decoration: none;
-    transition: all.4s ease-in-out, width 1s,linear 1s;
-}
-
-
-
-.sidebar a:hover {
-    padding-left: 50px;
-    border: 2px double black;
-
-
-}
-
-
-
-
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
     }
-
-    .sidebar a {
-        float: left;
+    .cancelbtn {
+       width: 100%;
     }
-
-    div.content {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
-}
+  }

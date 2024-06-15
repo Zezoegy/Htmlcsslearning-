@@ -64,12 +64,20 @@ img {
 
 
 body {
-    background-image: url(pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-
+  height: 100%;
+  margin: 0;
 }
 
+#bbg {
+background-image: url(pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+-webkit-filter: url(my\ pic.jpg);
+
+
+height: 100%;
+}
 .dot {
     cursor: pointer;
     height: 15px;
@@ -113,15 +121,15 @@ input[type=text], input[type=password] {
   }
   
   /* Set a style for all buttons */
-  button {
-    background-image:linear-gradient(rgb(198, 217, 252),rgb(68, 102, 251));
+  #kik {
+    background-image:linear-gradient(rgb(198, 217, 252),rgb(10, 40, 174));
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 40%;
+    border-radius: 5px;
   }
   
   button:hover {
@@ -174,9 +182,9 @@ input[type=text], input[type=password] {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button (x) */
@@ -212,7 +220,7 @@ input[type=text], input[type=password] {
   }
   
   /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
+  @media screen and (max-width: 500px) {
     span.psw {
        display: block;
        float: none;
@@ -221,3 +229,78 @@ input[type=text], input[type=password] {
        width: 100%;
     }
   }
+
+
+  .accordion {
+    background-color: #5b87b7;
+    color: #fbf4f4;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align:left;
+    border-radius: 4px;
+    border: none;
+    outline:none;
+    transition: 0.4s;
+  }
+  .active, .accordion:hover {
+    background-color: #7f6262;
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: rgb(154, 158, 198);
+    display: none;
+    overflow: hidden;
+  }
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+ /* Style the tab */
+.tab {
+  float: right;
+  margin-top: 250px;
+  border: 1px solid #ccc;
+  background-color: #7b7b7b;
+  width: 30%;
+  height: 150px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 16px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  margin-top: 250px;
+  float: right;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 40%;
+  border-left: none;
+  height: 120px;
+  background-color: #eda8a3;
+}

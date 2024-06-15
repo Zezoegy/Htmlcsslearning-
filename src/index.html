@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <div id="bbg">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="kik">Login</button>
 
 <div id="id01" class="modal">
   
@@ -24,14 +25,14 @@
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit" id="kik">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" id="kik">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
@@ -83,6 +84,21 @@ window.onclick = function(event) {
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
 </div>
+<br>
+<button class="accordion">The realm</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">the author</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">the details</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
 <script>
   let slideIndex = 1;
   showSlides(slideIndex);
@@ -111,10 +127,75 @@ window.onclick = function(event) {
     dots[slideIndex-1].className += " active";
   }
   </script>
+
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
   
-
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+  
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+  <br>
   <footer>
+    
+    
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+    
+    <div id="London" class="tabcontent">
+      <h3>phone</h3>
+      <p>3475553029</p>
+    </div>
+    
+    <div id="Paris" class="tabcontent">
+      <h3>address</h3>
+      <p>Via mario Angeloni 13</p> 
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+      <h3>Email</h3>
+      <p><a mailto:momosim71@gmail.com>momosim71@gmail.com</a></p>
+    </div>
+    <script>
+     function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+      </script>
   </footer>
+  </div>
 </body>
 </html>

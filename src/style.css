@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    
+
+
 }
 
 .slide-show-con {
@@ -43,7 +46,12 @@ img {
 .pre:hover .nex:hover {
     background-color: rgba(0, 0, 0, .8);
 }
+.change button{
+  text-align:center;
+  display:flexbox;
+  justify-content:flex-end;
 
+}
 .caption {
     color: #f2f2f2;
     font-size: 15px;
@@ -66,17 +74,8 @@ img {
 body {
   height: 100%;
   margin: 0;
-}
-
-#bbg {
 background-image: url(pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg);
-background-position: center;
-background-repeat: no-repeat;
 background-size: cover;
--webkit-filter: url(my\ pic.jpg);
-
-
-height: 100%;
 }
 .dot {
     cursor: pointer;

@@ -1,0 +1,110 @@
+.container {
+    padding: 64px;
+
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+  
+  .column-66 {
+    float:inline-start;
+    width: 66.66666%;
+    padding: 20px;
+  }
+  
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  .large-font {
+    font-size: 48px;
+  }
+  
+  .xlarge-font {
+    font-size: 64px
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #04AA6D;
+  }
+  
+  img {
+
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
+
+  .whatdo {
+position: absolute;
+    width: 1158.69px;
+    height: 534px;
+    top: 2500px;
+    left: 190px;
+    gap: 0px;
+    border-radius: 10px 0px 0px 0px;
+    opacity: 1px;
+
+  }
+h2  {
+    text-align: center;
+}
+
+.whatdo .box1 .box2 .box3 {
+    display:contents;
+    align-content: center;
+    justify-content: space-between;
+}
+  .top {
+text-align: center;
+  width: 700px;
+height: 195px;
+top: 696px;
+left: 370px;
+gap: 0px;
+opacity: 1px;
+  }
+  .whatdo .box1{
+    position: relative;
+    left: 10px;
+    width: 120px;
+    padding: 20px;
+    background-color: aquamarine;
+    text-align: center;
+    opacity: 1;
+  }
+  .whatdo .box2 {
+    position: relative;
+    width: 120px;
+    padding: 20px;
+    background-color: bisque;
+    text-align: center;
+
+  }
+.whatdo .box3 {
+    width: 120px;
+    padding: 20;
+    background-color: blueviolet;
+    text-align: center;
+}

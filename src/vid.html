@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>videodom</title>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <meta name="viewport" content="width=device-width , initial-scale=1">
+   <link rel="stylesheet" href="vid.css"> 
+    </head>
+    <body>
+        <button id="myBon">Rate</button>
+
+        <div id="myModal" class="modal">
+        
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Did you like the video</p> <br> <a href="time.html">Here</a> <br> <input id="sb" type="submit" >
+          </div>
+        
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBon");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+
+            <button id="mac" onclick="document.getElementById('id01').style.display='block'">&#9812 Plus</button>
+
+            <div id="id01" class="modale">
+              <span onclick="document.getElementById('id01').style.display='none'" class="closo" title="Close Modal">&#8855</span>
+              <form class="modale-content" >
+                <div class="container">
+                  <h1>Did you get a positive experience</h1>
+                  <p>let's know if you enjoyed it?</p>
+                
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Yes</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">No</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+
+        <video autoplay muted loop id="myVideo">
+            <source src="https://videocdn.cdnpk.net/harmony/content/video/partners1049/large_watermarked/BB_d7950f30-ef50-4d3b-a460-aeee2a809a38_preview.mp4" >
+    
+        </video>
+
+        <div class="content">
+            <h1>Nature</h1>
+            <p>Reddit and its partners use cookies and similar technologies to provide you with a better experience.<br>
+ By accepting all cookies, you agree to our use of cookies to deliver and maintain our services and site, <br> improve the quality of Reddit, personalize Reddit content and advertising, and measure the effectiveness of advertising</p>
+       <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+    
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+    </script>
+    </body>
+</html>

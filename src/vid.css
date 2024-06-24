@@ -1,0 +1,235 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(87, 87, 84);
+}
+#myVideo {
+    position: fixed;
+    left:10px;
+    top: 10%;
+    width: 50%;
+    border: 4px double black;
+    border-radius: 5px;
+    
+  }
+
+  .content {
+    position: fixed;
+    bottom: 180px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 420px;
+    padding: 3px;
+    align-items: center;
+  }
+
+  #myBtn {
+    width: 100px;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    background: #a26767;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: .4s;
+    animation-name: fadeIn;
+    animation-duration: .4s;
+  }
+  .modal-content {
+    position: fixed;
+    background-color: #c590ea;
+    bottom: 0;
+    left: 10px;
+    border: 1px solid #888;
+    text-align: center;
+    border-radius: 8px;
+    width: 40%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  .close {
+    color: #ed1b1b;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+   #myBon , #sb 
+   {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: rgb(23, 74, 74);
+padding: 8px;
+border-radius: 5px;
+cursor: pointer;
+color: #fff;
+   }
+   #mac {
+    position: fixed;
+    background-color: #49a7a9;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    opacity: 0.9;
+    left: 860px;
+   }
+
+   
+#mac:hover {
+    opacity:1;
+  }
+  
+  /* Float cancel and delete buttons and add an equal width */
+  .cancelbtn, .deletebtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add a color to the cancel button */
+  .cancelbtn {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  /* Add a color to the delete button */
+  .deletebtn {
+    background-color: #f44336;
+  }
+  
+  /* Add padding and center-align text to the container */
+  .container {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* The Modal (background) */
+  .modale {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modale-content {
+
+    background-color: #fefefe transparent;
+    z-index: 1;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Modal Close Button (x) */
+  .closo {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .closo:hover {
+    color: #f44336;
+    cursor: pointer;
+  }
+  .clearfix button {
+    width:80px;
+    text-align: center;
+    margin-left: 80px;
+    padding: 10px;
+    background-color: #c590ea;
+cursor: pointer;
+border-radius: 40%;
+ transform: .5s;
+
+  }
+  .clearfix button:hover {
+
+    padding-left: 20px;
+    background-color: cadetblue;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and delete button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .deletebtn {
+       width: 100%;
+    }
+  }

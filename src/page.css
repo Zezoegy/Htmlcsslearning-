@@ -65,17 +65,14 @@ position: absolute;
     gap: 0px;
     border-radius: 10px 0px 0px 0px;
     opacity: 1px;
+    color:darkslategray;
 
   }
 h2  {
     text-align: center;
 }
 
-.whatdo .box1 .box2 .box3 {
-    display:contents;
-    align-content: center;
-    justify-content: space-between;
-}
+
   .top {
 text-align: center;
   width: 700px;
@@ -85,26 +82,46 @@ left: 370px;
 gap: 0px;
 opacity: 1px;
   }
-  .whatdo .box1{
+ .box12{
     position: relative;
     left: 10px;
     width: 120px;
     padding: 20px;
     background-color: aquamarine;
     text-align: center;
-    opacity: 1;
+    border-radius: 6px;
+  
   }
-  .whatdo .box2 {
+  .box {
     position: relative;
     width: 120px;
     padding: 20px;
     background-color: bisque;
     text-align: center;
-
+    border-radius: 6px;
   }
-.whatdo .box3 {
+ .box32 {
     width: 120px;
-    padding: 20;
+    padding: 20px;
     background-color: blueviolet;
-    text-align: center;
+    text-align: center; border-radius: 6px; color: aliceblue;
+}
+
+
+.boxcont {
+  display: flex;
+  flex-direction: row;
+  justify-content:start;
+  gap: 66px;
+  margin-bottom: 20px;
+}
+.whatdo img {
+  text-align: center;
+  margin-top: 80px;
+  
+} label {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+
 }

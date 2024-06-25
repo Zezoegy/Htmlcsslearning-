@@ -1,202 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Show</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <head><title>Brand</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-  <a href="mxtd.html" target="_blank" class="change" style="padding: 18px 12px; background-color: #8081db; border-radius: 30%; text-decoration:none;"  ><button>Change</button></a>
-  <div id="bbg">
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="kik">Login</button>
+  <!-- Navigation -->
+<nav class="bar-black" id="myTopav" >
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="#m-content" class="w3-button w3-bar-item">Band</a>
+  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="chaitanya-pillala-zDDdoYqQ64U-unsplash.jpg"  width="80px" height="50px" alt="Avatar" class="avatar">
-    </div>
+<!-- Slide Show -->
+<section class="img-cont" >
+  <img class="mySlides" src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  style="width:100%">
+  <img class="mySlides" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  style="width:100%">
+  <img class="mySlides" src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  style="width:100%">
+  <img class="mySlides" src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  style="width:100% ;">
+  <img class="mySlides"  src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+  style="width: 100%;" alt="nature">
+  <img class="mySlides" src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+   style="width: 100%;" alt="noor">
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+   
+ 
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit" id="kik">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+</section>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" id="kik">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+
+<!-- Band Description -->
+<section class="m-content" id="m-content" style="max-width:800px">
+  <h2 class="w3-wide">NOSTRO</h2>
+  <p class="w3-opacity"><i>We love music</i></p>
+  <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+
+<!-- Band Members -->
+<section class="w3-row">
+  <article class="w3-third">
+    <p>John</p>
+    <img src="https://images.pexels.com/photos/9790290/pexels-photo-9790290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Random Name" style="width:100%">
+    <p>John is the smartest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Paul</p>
+    <img src="https://images.pexels.com/photos/7871457/pexels-photo-7871457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Random Name" style="width:100%">
+    <p>Paul is the prettiest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Ringo</p>
+    <img src="https://images.pexels.com/photos/9398275/pexels-photo-9398275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Random Name" style="width:100%">
+    <p>Ringo is the funniest.</p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container" id="contact">
+  <a href="#" id="mac" ><i class="fa fa-facebook-official"></i></a>
+  <a href="#" id="mac" ><i class="fa fa-pinterest-p"></i></a>
+  <a href="#" id="mac"><i class="fa fa-twitter"></i></a>
+  <a href="#" id="mac" ><i class="fa fa-flickr"></i></a>
+  <a href="#" id="mac" ><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="mailto:momosim71@gmail.com" target="_blank">MSSN</a>
+  </p>
+</footer>
+
 
 <script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "bar-black") {
+      x.className += " responsive";
+    } else {
+      x.className = "bar-black";
     }
-}
-</script>
-
-<div class="slide-show-con">
-  <legend style="text-align: end; font-size: 15px; color: aliceblue;" >Slide show</legend>
-  <div class="mySlides fade">
-    <div class="number">1/4</div>
-    <img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="moon">
-    <div class="caption">luner full</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="number">2/4</div>
-    <img src="https://images.unsplash.com/photo-1512987415479-85f370bca602?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="halfmoon">
-    <div class="caption">luner half</div>
-  </div>
-  <div class="mySlides fade">
-  <div class="number">3/4</div>
-  <img src="https://images.unsplash.com/photo-1514897575457-c4db467cf78e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%"  alt="slimmoon">
-  <div class="caption">Slim</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="number">4/4</div>
-    <img src="https://images.unsplash.com/photo-1499578124509-1611b77778c8?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100%" alt="cloudy">
-    <div class="caption">Cloudy moon</div>
-  </div>
-
-  <a class="pre" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="nex" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<div style="text-align: center;">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
-<br>
-<button class="accordion">The realm</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-
-<button class="accordion">the author</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-
-<button class="accordion">the details</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
   }
   </script>
 
-
-  <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+<script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
   
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
-      this.classList.toggle("active");
-  
-      /* Toggle between hiding and showing the active panel */
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
   }
   </script>
-  <br>
-  <footer>
-    
-    
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-    </div>
-    
-    <div id="London" class="tabcontent">
-      <h3>phone</h3>
-      <p>3475553029</p>
-    </div>
-    
-    <div id="Paris" class="tabcontent">
-      <h3>address</h3>
-      <p>Via mario Angeloni 13</p> 
-    </div>
-    
-    <div id="Tokyo" class="tabcontent">
-      <h3>Email</h3>
-      <p><a mailto:momosim71@gmail.com>momosim71@gmail.com</a></p>
-    </div>
-    <script>
-     function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+  
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-      </script>
-  </footer>
-  </div>
 </body>
 </html>

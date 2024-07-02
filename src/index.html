@@ -13,7 +13,7 @@
 <nav class="bar-black" id="myTopav" >
   <a href="index.html" class="w3-button w3-bar-item">Home</a>
   <a href="#m-content" class="w3-button w3-bar-item">About me</a>
-  <a href="#w3-row" class="w3-button w3-bar-item">Jobs</a>
+  <a href="#defaultOpen" class="w3-button w3-bar-item">Jobs</a>
   <a href="#contact" class="w3-button w3-bar-item">Contact</a>
 </nav>
 
@@ -57,25 +57,33 @@
   </ul> </p>
 </section>
 
-<!-- Band Members -->
-<section class="w3-row" id="w3-row">
-  <article class="w3-third">
-    <p>Graphic Design</p>
-    <img src="my illustration.png" alt="artistic view" style="width:100%">
-    <p> (Images - Vedio editing -graphic design) </p>
-  </article>
-  <article class="w3-third">
-    <p>Social media</p>
-    <img src="pexels-freestockpro-9822748.jpg" alt="socila media app" style="width:30%">
-    <p> (Improve content quality - Increase the reach ) </p>
-  </article>
-  <article class="w3-third">
-    <p>Web development</p>
-    <img src="pexels-pixabay-270348.jpg" alt="coding" style="width:100%">
-    <p> (Web development - Web design) </p>
-  </article>
-</section>
+<!-- tab bar -->
+<button class="tablink" onclick="openPage('Home', this, 'purple')" id="defaultOpen" >Social media</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" >Technical solutions</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Graphics and design</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Web development</button>
 
+<div id="Home" class="tabcontent" style="background-image:url(pexels-prateekkatyal-2694434.jpg); background-size: contain; ">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent" style="background-image: url(pexels-pixabay-355948.jpg); background-size: contain;" >
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent" style="background-image: url(pexels-magda-ehlers-pexels-1279813.jpg);" >
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent" style="background-image: url(pexels-pixabay-270404.jpg); background-size: cover; " >
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<br>
 <!-- Footer -->
 <footer class="w3-container" id="contact">
   
